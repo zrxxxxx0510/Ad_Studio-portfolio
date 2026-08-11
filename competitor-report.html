@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ad Studio - 完整竞品报告</title>
+    <meta
+      name="description"
+      content="Ad Studio 竞品报告：整理 AIGC 短视频广告生成工具的竞品路线、产品流程、能力缺口和产品机会。"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top">Ad Studio</a>
+      <div class="header-right">
+        <nav aria-label="页面导航">
+          <a href="index.html#competitors">返回竞品分析</a>
+          <a href="#routes">竞品路线</a>
+          <a href="#xiaoyunque">小云雀</a>
+          <a href="#takeaways">ComfyUI</a>
+          <a href="#feature-matrix">功能矩阵</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="competitor-page-layout">
+      <aside class="competitor-side-nav" aria-label="竞品报告章节导航">
+        <nav>
+          <a href="#routes">01 竞品路线</a>
+          <a class="side-subitem" href="#xiaoyunque">小云雀</a>
+          <a class="side-subitem" href="#takeaways">ComfyUI</a>
+          <a href="#feature-matrix">02 功能矩阵</a>
+        </nav>
+      </aside>
+
+      <div class="competitor-page-content">
+      <section id="routes" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">01 · 竞品路线</p>
+          <h2>竞品路线：对话式 Agent vs 节点工作流</h2>
+        </div>
+        
+      
+
+      <div id="xiaoyunque" class="route-detail-block">
+        <div class="section-heading">
+          <h2>01 小云雀：Agent 式营销短视频生成流程</h2>
+          <p>
+            <b>Agent 对话流：</b>用户用自然语言提出目标、补充素材和确认方向，Agent 在对话中理解需求并推进后续步骤。
+          </p>
+          <p>
+            <b>学习不同 Skills：</b>系统可先学习营销短视频等任务技能，再调用对应能力完成商品诊断、热点检索、创意规划和视频生成。
+          </p>
+        </div>
+
+        <div class="xyq-flow-card">
+          <div class="xyq-flow-head">
+            <span>流程从输入 Prompt 和产品图片开始</span>
+            <strong>示例任务：Dior 气垫开箱实测分享</strong>
+          </div>
+          <div class="xyq-combined-scroll" aria-label="横向拖动查看小云雀流程与示例">
+            <div class="xyq-combined-flow">
+              <article class="xyq-combined-card xyq-combined-card-wide">
+                <div class="xyq-combined-top">
+                  <span>01</span>
+                  <div>
+                    <h3>输入 Prompt + 产品图片</h3>
+                    <p>用户先用自然语言说明任务，并上传产品图片作为视觉参考。</p>
+                  </div>
+                </div>
+                <div class="xyq-combined-example xyq-prompt-block">
+                  <p><b>【任务类型】</b>长视频创作</p>
+                  <p><b>【生成时长】</b>45 秒</p>
+                  <p><b>【视频脚本需求】</b>为 Dior 气垫粉饼制作一支竖屏 UGC 感带货短视频，采用“朋友安利”式的亲切口播风格。整体基调简约高级，但氛围轻松真实，区别于传统广告。主题是分享个人使用体验，突出产品核心卖点。</p>
+                  <p><b>故事线：</b>开头 5 秒手持产品快速展示包装和菱格纹设计，口播“给你们看看我刚入手的 Dior 气垫”。中间 30 秒分步展示使用过程：打开顶盖，特写粉芯和黑色粉扑；用粉扑蘸取粉底并轻拍在手背或脸部，展示细腻粉质和光泽感；快速切换妆前妆后或不同光线下的妆效。结尾 10 秒手持产品总结，鼓励购买。</p>
+                  <p><b>关键场景：</b>产品在自然光或室内柔光下的开盖特写；粉扑蘸粉和上妆过程的近景；妆后皮肤质感的特写。</p>
+                  <p><b>口播风格：</b>口语化、亲切、有感叹词，例如“哇这个粉质真的好细”“上脸就是那种很高级的妆感”“姐妹们真的可以冲”。参考图 1 作为产品外观和质感的视觉标准。</p>
+                  <p><b>视频时长：</b>15 秒</p>
+                </div>
+              </article>
+
+              <article class="xyq-combined-card">
+                <div class="xyq-combined-top">
+                  <span>02</span>
+                  <div>
+                    <h3>产品诊断</h3>
+                    <p>系统提炼商品卖点、人群、转化目标和视觉锚点。</p>
+                  </div>
+                </div>
+                <div class="xyq-combined-example">
+                  <ul>
+                    <li><b>产品：</b>Dior 气垫粉饼，高端美妆品类</li>
+                    <li><b>可视化价值：</b>银色菱格纹开盖、粉扑蘸取粉芯、轻拍上脸后的高级光泽</li>
+                    <li><b>目标人群：</b>25-35 岁都市女性，追求精致妆容但时间有限</li>
+                    <li><b>转化目标：</b>种草 → 直接购买，高客单需要信任铺垫</li>
+                    <li><b>证明形式：</b>上妆前后对比、粉质细腻度展示</li>
+                    <li><b>视觉锚点：</b>银菱格纹顶盖、CD 标识、黑色粉扑、奶杏色粉芯</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="xyq-combined-card">
+                <div class="xyq-combined-top">
+                  <span>03</span>
+                  <div>
+                    <h3>热点方向选择</h3>
+                    <p>系统给出可借鉴的热点赛道，并解释与商品的适配方式。</p>
+                  </div>
+                </div>
+                <div class="xyq-combined-example">
+                  <ul>
+                    <li><b>爆款套路：</b>美妆博主粉膏测评</li>
+                    <li><b>热度：</b>★★★★★（hot_score: 315664）</li>
+                    <li><b>赛道：</b>美妆 · 产品测评 · 底妆</li>
+                    <li><b>爆点：</b>美妆博主 + 产品使用演示 + 口播讲解 + 高清特写 + 精致妆效呈现</li>
+                    <li><b>适配原因：</b>天然适合气垫粉饼植入，口播、上妆演示和妆效对比能连成完整带货链路</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="xyq-combined-card xyq-combined-card-choice">
+                <div class="xyq-combined-top">
+                  <span>04</span>
+                  <div>
+                    <h3>??????</h3>
+                    <p>?????????????????????????????????????</p>
+                  </div>
+                </div>
+                <div class="xyq-combined-example xyq-agent-panel">
+                  <div class="xyq-agent-done">
+                    <p><span>?</span> ??????????????</p>
+                    <p><span>?</span> ??????????????</p>
+                    <p><span>?</span> ?????????????????</p>
+                  </div>
+
+                  <div class="xyq-choice-box">
+                    <div class="xyq-choice-head">
+                      <strong>??????????</strong>
+                      <em>???</em>
+                    </div>
+                    <div class="xyq-choice-option xyq-choice-option-active">
+                      <div class="xyq-choice-index">1</div>
+                      <div>
+                        <h4>??1????? ? 30???</h4>
+                        <p><b>?????</b>?????????????????????? Dior ?????????????</p>
+                        <p><b>?????</b>?????????????????????????</p>
+                        <p><b>?????</b>??????? 30 ?????</p>
+                      </div>
+                    </div>
+                    <div class="xyq-choice-option">
+                      <div class="xyq-choice-index">2</div>
+                      <div>
+                        <h4>??2????? ? ??????</h4>
+                        <p><b>?????</b>?????? Dior ???????????????????</p>
+                        <p><b>?????</b>???? UGC ??????????????</p>
+                        <p><b>?????</b>???????????????</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="xyq-chat-input">
+                    <span>???????????????????...</span>
+                    <button aria-label="??">?</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="xyq-combined-card">
+                <div class="xyq-combined-top">
+                  <span>05</span>
+                  <div>
+                    <h3>生成 plan.md</h3>
+                    <p>系统把方向整理成可执行视频规划文件。</p>
+                  </div>
+                </div>
+                <div class="xyq-combined-example">
+                  <ol>
+                    <li>选题方向：闺蜜安利 · Dior 气垫开箱实测分享</li>
+                    <li>选题优势：爆点机制、人群、依据</li>
+                    <li>视频规格：9:16｜15 秒｜简约高级轻奢质感｜真实 UGC 种草调性</li>
+                    <li>角色列表：28 岁都市女性，梳妆台前开箱与上脸实测</li>
+                    <li>镜头列表：开盖特写、粉扑蘸粉、上脸轻拍、妆效展示、手持产品推荐</li>
+                    <li>发布信息：封面、标题、话题和 CTA</li>
+                  </ol>
+                </div>
+              </article>
+
+              <article class="xyq-combined-card">
+                <div class="xyq-combined-top">
+                  <span>06</span>
+                  <div>
+                    <h3>直接生成最终视频</h3>
+                    <p>系统根据 plan.md 直接生成一条完整短视频。</p>
+                  </div>
+                </div>
+                <div class="xyq-combined-example">
+                  <ul>
+                    <li>根据创作规划生成最终成片</li>
+                    <li>输出一条竖屏 UGC 带货短视频</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div id="takeaways" class="route-detail-block">
+        <div class="section-heading">
+          <h2>02 ComfyUI：节点式视频生成工作流</h2>
+        </div>
+        <div class="node-flow-showcase">
+          <p>
+            节点工具流把商品图、人物参考、Prompt、分镜表和多个镜头 Prompt 拆成可连接节点，
+            用户可以清楚看到“输入如何流向每个镜头，再汇总成最终视频”。
+          </p>
+          <figure>
+            <img src="assets/runninghub-node-flow.webp" alt="RunningHub 风格节点画布示意图，展示产品图、人物参考、分镜表、镜头 Prompt、镜头片段和最终视频之间的连接关系" />
+            <button class="node-flow-hotspot node-flow-hotspot-a" aria-label="A 输入区域">
+              <span><b>A 输入区域</b>产品图、人物参考、Prompt 和商品诊断等初始输入。</span>
+            </button>
+            <button class="node-flow-hotspot node-flow-hotspot-b" aria-label="B 分镜表">
+              <span><b>B 分镜表</b>用表格拆解每个镜头的时间、景别、画面和台词。</span>
+            </button>
+            <button class="node-flow-hotspot node-flow-hotspot-c" aria-label="C 分镜图">
+              <span><b>C 分镜图</b>用真人画面预览每个镜头的视觉构图。</span>
+            </button>
+            <button class="node-flow-hotspot node-flow-hotspot-d" aria-label="D 镜头 Prompt">
+              <span><b>D 镜头 Prompt</b>把分镜转写成具体的视频生成提示词。</span>
+            </button>
+            <button class="node-flow-hotspot node-flow-hotspot-e" aria-label="E 镜头片段">
+              <span><b>E 镜头片段</b>分别生成并检查每个镜头的视频片段。</span>
+            </button>
+            <button class="node-flow-hotspot node-flow-hotspot-f" aria-label="F 最终视频">
+              <span><b>F 最终视频</b>将通过的镜头片段拼接成完整成片。</span>
+            </button>
+          </figure>
+        </div>
+
+
+      </div>
+    
+      </section>
+
+
+      <section id="feature-matrix" class="section">
+        <div class="competitor-feature-matrix">
+          <div class="section-heading">
+            <p class="eyebrow">02 · 功能矩阵</p>
+            <h2>两类竞品各自擅长什么，又缺什么？</h2>
+          </div>
+          <div class="feature-matrix-table">
+            <div class="feature-matrix-head">
+              <span>能力维度</span>
+              <span>小云雀</span>
+              <span>ComfyUI</span>
+            </div>
+            <div>
+              <span>产品诊断</span>
+              <span class="matrix-advantage"><b>优势：</b><strong class="matrix-highlight">背靠平台内容生态和商品数据</strong>，能在对话中快速抽取品类、核心卖点、目标人群、转化目标和视觉锚点，<strong class="matrix-highlight">降低用户从 0 梳理商品的成本。</strong></span>
+              <span><b>欠缺：</b>不主动理解商品和营销目标，用户需要自己完成产品诊断、卖点拆解和人群判断，再把结果手动写入节点或 Prompt。</span>
+            </div>
+            <div>
+              <span>爆款学习</span>
+              <span class="matrix-advantage"><b>优势：</b><strong class="matrix-highlight">可结合平台热点、爆款素材和营销技能</strong>，先给出热点方向、赛道、爆点和参考视频，<strong class="matrix-highlight">帮助用户快速找到可借鉴的内容入口。</strong></span>
+              <span><b>欠缺：</b>缺少内置的爆款召回、相似案例检索和策略归纳能力，参考视频主要依赖用户自己收集和判断。</span>
+            </div>
+            <div>
+              <span>策略推荐</span>
+              <span class="matrix-advantage"><b>优势：</b>能把热点方向进一步拆成多个创意方向，并生成 plan.md 等执行计划，<strong class="matrix-highlight">让用户从“想创意”快速进入“选方向”。</strong></span>
+              <span><b>欠缺：</b>不主动推荐广告策略，也不会解释某个策略为什么适合当前商品；策略质量主要取决于操作者经验。</span>
+            </div>
+            <div>
+              <span>分阶段控制</span>
+              <span><b>欠缺：</b>从 plan.md 到最终视频之间控制粒度较粗，缺少清晰的分镜、片段反馈和阶段固定机制，容易直接进入一键生成。</span>
+              <span class="matrix-advantage"><b>优势：</b>可把脚本、分镜、图片、视频和音频拆成节点控制，用户能<strong class="matrix-highlight">沿着节点链路检查每一步输入输出，并对局部节点进行调整。</strong></span>
+            </div>
+            <div>
+              <span>局部修改与版本管理</span>
+              <span><b>欠缺：</b>对话反馈更适合整体改写，多版本保存、对比、回退和局部组合能力较弱，用户难以稳定保留已满意的片段。</span>
+              <span class="matrix-advantage"><b>优势：</b>可替换单个节点、素材或参数，局部控制能力强；用户可以<strong class="matrix-highlight">在不推翻整条流程的情况下调整某个生成环节。</strong></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>完整竞品报告 · Ad Studio</p>
+      <a href="index.html#competitors">返回竞品分析</a>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".xyq-flow-scroll, .xyq-output-scroll, .xyq-combined-scroll").forEach((scroller) => {
+        let isDown = false;
+        let startX = 0;
+        let scrollLeft = 0;
+
+        scroller.addEventListener("pointerdown", (event) => {
+          isDown = true;
+          startX = event.pageX - scroller.offsetLeft;
+          scrollLeft = scroller.scrollLeft;
+          scroller.setPointerCapture(event.pointerId);
+        });
+
+        scroller.addEventListener("pointermove", (event) => {
+          if (!isDown) return;
+          event.preventDefault();
+          const x = event.pageX - scroller.offsetLeft;
+          scroller.scrollLeft = scrollLeft - (x - startX);
+        });
+
+        scroller.addEventListener("pointerup", () => {
+          isDown = false;
+        });
+
+        scroller.addEventListener("pointerleave", () => {
+          isDown = false;
+        });
+      });
+
+    </script>
+  </body>
+</html>

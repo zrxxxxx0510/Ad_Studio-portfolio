@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ad Studio 的关键产品决策</title>
+    <meta
+      name="description"
+      content="Ad Studio 关键产品决策：解释钩子、展示、转化策略结构，Top-20 RAG 策略归纳，多版本比较，分步骤生成和分步骤固定。"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="product-decisions-page">
+    <header class="site-header">
+      <a class="brand" href="index.html#top">Ad Studio</a>
+      <div class="header-right">
+        <nav aria-label="页面导航">
+          <a href="index.html#opportunity">返回产品机会</a>
+          <a href="#decisions">关键决策</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="decision-page-layout">
+        <aside class="decision-side-nav" aria-label="关键产品决策导航">
+          <nav>
+            <a href="#decision-01">01 策略结构</a>
+            <a href="#decision-02">02 爆款学习</a>
+            <a href="#decision-03">03 分阶段生成</a>
+            <a href="#decision-04">04 版本管理</a>
+            <a href="#decision-05">05 模型选型</a>
+          </nav>
+        </aside>
+
+        <section id="decisions" class="section decision-content">
+          <div class="section-heading decision-page-heading">
+            <h2>关键产品决策：从方案取舍中定义 Ad Studio 的产品形态</h2>
+          </div>
+
+        <div class="decision-list">
+          <article id="decision-01">
+            <div class="decision-main">
+              <h3>01 策略结构：为什么拆成钩子 / 展示 / 转化？</h3>
+              <div class="decision-options">
+                <p class="decision-option rejected"><span>×</span> 让用户直接模仿整条爆款视频</p>
+                <p class="decision-option selected"><span>✓</span> <strong>拆成钩子 / 展示 / 转化三类广告策略单元</strong></p>
+              </div>
+            </div>
+            <div class="decision-reason">
+              <h4>行业洞察</h4>
+              <ul class="decision-bullet-list">
+                <li>
+                  <a href="https://ads.tiktok.com/help/article/creative-best-practices" target="_blank" rel="noopener noreferrer">TikTok For Business</a> 在广告创意最佳实践中建议，表现型广告应遵循“钩子 - 突出核心卖点 - 明确行动号召”的结构：前几秒抓住注意力，中段突出产品价值，结尾引导用户点击、购买或进入店铺。
+                </li>
+              </ul>
+              <h4>策略标注流程</h4>
+              <p>
+                因此，我们先获取 TikTok 上美妆类近 3 个月高表现的 10000+ 条视频，由 LLM 初步识别每条视频中的钩子、展示和转化片段，再对策略进行初步归纳。随后我们人工合并相近类别、整理命名，并为视频标注对应的策略类型，使系统能够基于策略单元进行推荐、组合和后续生成。
+              </p>
+              <div class="strategy-taxonomy-table" aria-label="钩子、展示、转化策略类型">
+                <div class="strategy-taxonomy-head">
+                  <span>钩子策略</span>
+                  <span>展示策略</span>
+                  <span>转化策略</span>
+                </div>
+                <div>
+                  <span>痛点切入钩子（47.3%）</span>
+                  <span>产品特写展示（33.4%）</span>
+                  <span>购买链接 / 店铺入口转化（58.1%）</span>
+                </div>
+                <div>
+                  <span>效果证据钩子（17.4%）</span>
+                  <span>效果结果展示（24.0%）</span>
+                  <span>价格折扣与赠品转化（26.2%）</span>
+                </div>
+                <div>
+                  <span>教育纠偏钩子（13.9%）</span>
+                  <span>使用演示展示（22.6%）</span>
+                  <span>稀缺紧迫与限量库存转化（15.5%）</span>
+                </div>
+                <div>
+                  <span>情绪共鸣钩子（7.3%）</span>
+                  <span>教育解释展示（16.0%）</span>
+                  <span>降低风险与真实性转化（0.2%）</span>
+                </div>
+                <div>
+                  <span>感官吸引钩子（6.4%）</span>
+                  <span>反馈信任背书展示（1.9%）</span>
+                  <span class="strategy-empty">—</span>
+                </div>
+                <div>
+                  <span>社会证明钩子（3.7%）</span>
+                  <span>场景解决方案展示（1.1%）</span>
+                  <span class="strategy-empty">—</span>
+                </div>
+                <div>
+                  <span>日常流程钩子（2.4%）</span>
+                  <span>套装清单展示（1.0%）</span>
+                  <span class="strategy-empty">—</span>
+                </div>
+                <div>
+                  <span>折扣价值钩子（1.7%）</span>
+                  <span class="strategy-empty">—</span>
+                  <span class="strategy-empty">—</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="decision-02">
+            <div class="decision-main">
+              <h3>02 爆款学习：为什么基于 Top-20 归纳策略？</h3>
+              <div class="decision-options">
+                <p class="decision-option rejected"><span>×</span> 展示 3 条相似爆款视频供用户模仿</p>
+                <p class="decision-option selected"><span>✓</span> <strong>基于 Top-20 相似高表现视频归纳 3 组策略组合</strong></p>
+              </div>
+            </div>
+            <div class="decision-reason">
+              <h4>爆款学习机制</h4>
+              <ul class="decision-bullet-list">
+                <li>
+                  <strong>召回相似产品，而不是只找表面相似视频。</strong> 系统先进行商品诊断，识别商品的六类关键信息：品类、核心卖点、目标人群、使用场景、用户痛点和平台语境。随后，系统基于这些诊断结果进行 RAG 召回。召回结果中既包含品类相似的商品，例如同样是面霜；也包含功能相似的商品，例如同样主打抗衰、修护或美白功效。这样召回不只依赖外观或标题相似，而是更贴近当前商品真正可以学习的广告表达。
+                </li>
+                <li>
+                  <strong>综合学习 Top-20，而不是复刻单条爆款。</strong> 只看少量视频容易让用户照搬脚本、动作或画面形式，却难以判断这些做法是否真正适合当前商品。Top-20 RAG 让系统从一组相似高表现案例中归纳可迁移的深层策略共性，帮助用户理解哪些表达可以迁移，哪些只是单条视频的偶然成功。
+                </li>
+                <li>
+                  <strong>给出不同策略组合，而不是只推荐一个方向。</strong> 系统将推荐组织成三种可选方向：一种重点参照与当前商品最相似的案例，一种重点参照高销量视频，一种重点参照高播放量视频。这样用户可以根据当前创作目标，在“商品适配”“销量表现”和“播放表现”之间选择更合适的策略组合。
+                </li>
+              </ul>
+              <div class="rag-funnel-block" aria-label="RAG 召回漏斗">
+                <h4 class="rag-block-title">RAG 召回策略</h4>
+                <div class="rag-funnel" aria-hidden="true">
+                  <div class="rag-layer layer-1">硬筛选：商品大类匹配</div>
+                  <div class="rag-layer layer-2">粗排：商品属性匹配</div>
+                  <div class="rag-layer layer-3">精排：需求价值匹配</div>
+                  <div class="rag-layer layer-4">精排：创意策略匹配</div>
+                  <div class="rag-rerank">重排：效果表现重排</div>
+                </div>
+                <div class="rag-table">
+                  <div class="rag-table-head">
+                    <span>筛选字段</span>
+                    <span>技术</span>
+                    <span>例子（e.g. 抗老眼霜）</span>
+                  </div>
+                  <div>
+                    <span>商品大类</span>
+                    <span>规则硬筛</span>
+                    <span>候选产品是面部护肤类。</span>
+                  </div>
+                  <div>
+                    <span>商品标题、子品类</span>
+                    <span>BM25</span>
+                    <span>筛选出 Top-100，例如标题或子品类中包含眼霜、抗老眼部护理。</span>
+                  </div>
+                  <div>
+                    <span>痛点、卖点、功效</span>
+                    <span>Embedding</span>
+                    <span>从 Top-100 中选出 Top-50，例如主打淡纹、紧致、提亮、保湿。</span>
+                  </div>
+                  <div>
+                    <span>目标用户、使用场景、品牌调性</span>
+                    <span>Embedding</span>
+                    <span>从 Top-50 中选出 Top-20，例如熟龄护肤、夜间护理、敏感肌可用。</span>
+                  </div>
+                  <div>
+                    <span>播放量、销量、相似分数</span>
+                    <span>排序重排</span>
+                    <span>围绕抗老眼霜分别按播放量、销量和相似分数重排，生成高播放参考、高销量参考和最相似商品参考。</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="decision-03">
+            <div class="decision-main">
+              <h3>03 分阶段生成：为什么不直接一键生成整片？</h3>
+              <div class="decision-options">
+                <p class="decision-option rejected"><span>×</span> 输入 Prompt 后直接生成完整视频</p>
+                <p class="decision-option selected"><span>✓</span> <strong>分阶段固定：分镜 → 故事脚本 → 视频片段 → 最终视频</strong></p>
+              </div>
+            </div>
+            <div class="decision-reason">
+              <ul class="decision-bullet-list">
+                <li>
+                  <strong>贴合真实创作流程：</strong> <a href="https://advertising.amazon.com/en-gb/library/guides/video-production" target="_blank" rel="noopener noreferrer">Amazon Ads 的 Video Production Guide</a> 将视频广告流程拆为概念构思、脚本撰写、故事板生成、正式制作和后期制作等阶段，强调概念会指导脚本和视觉风格，脚本或故事板确认后再进入正式生产。这样的阶段划分能让创作者先确认整体方向，再逐步细化具体镜头和画面，减少后期大幅返工。
+                </li>
+                <li>
+                  <strong>Ad Studio 支持分阶段反馈与固定：</strong> 分镜阶段可以修改场景、人物形象、产品展示方式和镜头距离，把关整体视觉方向；视频片段阶段主要调整旁白、动作和运镜，进一步细化具体画面表现。用户已经选定或满意的部分也能被固定下来，后续修改只围绕不满意的局部展开。
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article id="decision-04">
+            <div class="decision-main">
+              <h3>04 版本管理：为什么需要多版本比较？</h3>
+              <div class="decision-options">
+                <p class="decision-option rejected"><span>×</span> 只保留线性的生成记录</p>
+                <p class="decision-option selected"><span>✓</span> <strong>支持多版本保存、对比、回退和择优组合</strong></p>
+              </div>
+            </div>
+            <div class="decision-reason">
+              <ul class="decision-bullet-list">
+                <li>
+                  <strong>多版本比较是广告创作的常态：</strong> 同一个商品通常需要尝试不同钩子、展示方式和转化话术。上一版可能开头更抓人，这一版产品展示更清楚，另一版转化表达更适合投放。
+                </li>
+                <li>
+                  <strong>Ad Studio 将版本迭代变成可管理流程：</strong> 系统保留不同阶段的候选版本，支持用户对比、回退和择优组合。这样多次生成不再只是堆积结果，而是可以围绕“哪一部分更好”持续收敛。
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article id="decision-05">
+            <div class="decision-main">
+              <h3>05 模型选型：为什么最终选择 Veo 3.1 Fast？</h3>
+            </div>
+            <div class="decision-reason">
+              <div class="model-info-strip" aria-label="Veo 3.1 Fast 基本信息">
+                <div>
+                  <span>模型归属</span>
+                  <strong>Google / DeepMind</strong>
+                </div>
+                <div>
+                  <span>API 发布</span>
+                  <strong>2025 年 10 月</strong>
+                </div>
+                <div>
+                  <span>标准价格</span>
+                  <strong>$0.15 / 秒（约 ¥1.1 / 秒）</strong>
+                </div>
+              </div>
+              <ul class="decision-bullet-list">
+                <li>
+                  <strong>参考图能力是硬性条件：</strong> Ad Studio 需要同时参考分镜图、产品图和人物 / 场景图，以保持人物、产品和画面设定一致；因此只有 Veo 3.1 / 3.1 Fast 符合要求。
+                </li>
+                <li>
+                  <strong>最终选择 Veo 3.1 Fast：</strong> 初测（20 条视频）中，Veo 3.1 与 3.1 Fast 的画面稳定性没有显著差别；因此我们选择成本更低、生成更快的 Veo 3.1 Fast。
+                </li>
+              </ul>
+              <div class="model-api-table" aria-label="Veo API 参数规范对比">
+                <div class="model-api-head">
+                  <span>参数</span>
+                  <span>Veo 3.1</span>
+                  <span class="model-api-selected">Veo 3.1 Fast</span>
+                  <span>Veo 3.1 Lite</span>
+                  <span>Veo 3 / 3 Fast</span>
+                  <span>Veo 2</span>
+                </div>
+                <div>
+                  <span><code>prompt</code><br>视频文字说明，支持音频提示。</span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span class="model-api-selected"><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                </div>
+                <div>
+                  <span><code>image</code><br>作为动画起点的初始图片。</span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span class="model-api-selected"><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                </div>
+                <div>
+                  <span><code>lastFrame</code><br>插值视频要过渡到的最终图片，需与 image 搭配使用。</span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span class="model-api-selected"><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-yes">✓</strong></span>
+                </div>
+                <div class="model-api-important">
+                  <span><code>referenceImages</code><br>最多 3 张风格和内容参考图，用于保持人物、产品和场景一致。</span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span class="model-api-selected"><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-no">×</strong></span>
+                  <span><strong class="support-no">×</strong></span>
+                  <span><strong class="support-no">×</strong></span>
+                </div>
+                <div>
+                  <span><code>video</code><br>用于视频扩展的上一代视频。</span>
+                  <span><strong class="support-yes">✓</strong></span>
+                  <span class="model-api-selected"><strong class="support-yes">✓</strong></span>
+                  <span><strong class="support-no">×</strong></span>
+                  <span><strong class="support-no">×</strong></span>
+                  <span><strong class="support-no">×</strong></span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        </section>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <p>关键产品决策 · Ad Studio</p>
+      <a href="index.html#opportunity">返回产品机会</a>
+    </footer>
+
+  </body>
+</html>
