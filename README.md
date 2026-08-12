@@ -14,7 +14,7 @@ Static portfolio page for an AIGC product manager case study.
 5. Select `main` branch and `/root`.
 6. Save and wait for the generated Pages URL.
 
-Resume link formats:
+Resume link format:
 
 ```text
 Portfolio: AIGC Video Ad Product Case Study

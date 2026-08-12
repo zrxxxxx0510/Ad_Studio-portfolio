@@ -18,9 +18,9 @@
           <a href="#story">用户故事</a>
           <a href="#journey">用户旅程</a>
           <a href="#competitors">竞品分析</a>
-          <a href="#opportunity">产品机会</a>
-          <a href="#product-flow">用户流程</a>
-          <a href="#evaluation">评估指标</a>
+          <a href="#opportunity">痛点洞察 & 产品机会</a>
+          <a href="#product-flow">产品工作流</a>
+          <a href="#evaluation">指标评测体系</a>
         </nav>
       </div>
     </header>
@@ -31,9 +31,9 @@
           <a href="#story">01 用户故事</a>
           <a href="#journey">02 用户旅程</a>
           <a href="#competitors">03 竞品分析</a>
-          <a href="#opportunity">04 产品机会</a>
-          <a href="#product-flow">05 用户流程</a>
-          <a href="#evaluation">06 评估指标</a>
+          <a href="#opportunity">04 痛点洞察 & 产品机会</a>
+          <a href="#product-flow">05 产品工作流</a>
+          <a href="#evaluation">06 指标评测体系</a>
         </nav>
       </aside>
       <section class="hero">
@@ -266,7 +266,7 @@
 
       <section id="product-flow" class="section product-flow-section">
         <div class="section-heading">
-          <p class="eyebrow">05 · 用户流程</p>
+          <p class="eyebrow">05 · 产品工作流</p>
           <h2>从商品输入到视频成片</h2>
           <p>
             <a class="inline-link" href="https://ad-video-api-y5mfnuqs6a-uc.a.run.app/" target="_blank" rel="noopener noreferrer">Ad Studio</a> 将商品诊断、相似爆款召回、策略推荐、分镜反馈和片段优选串联在同一条创作链路中。
@@ -641,9 +641,9 @@
 
       <section id="evaluation" class="section evaluation-section">
         <div class="section-heading">
-          <p class="eyebrow">06 · 产品评测</p>
+          <p class="eyebrow">06 · 指标评测体系</p>
           <h2>如何判断 Ad Studio 真的有效？</h2>
-          <p>评测体系围绕“能否在限制内产出可投放素材”展开，并把质量问题定位到商品诊断、召回、策略、分镜和片段生成等关键环节。</p>
+          <p>评测体系围绕北极星指标“商品成片采纳率”展开，同时监测过程、结果与成本三类指标：过程侧定位各生成环节中的关键问题；结果侧评估最终成片质量、用户满意度与转化意愿；成本侧测算各环节生成时长与费用。</p>
         </div>
 
         <div class="evaluation-panel">
@@ -654,25 +654,17 @@
 
             <article class="evaluation-score-card evaluation-score-card-primary">
               <span class="evaluation-label">北极星指标</span>
-              <h3>限额内可投放任务成功率</h3>
+              <h3>商品成片采纳率</h3>
               <strong class="evaluation-score">85%</strong>
-              <p>在限定时间、生成轮次和成本预算内，产出至少 1 条被用户保存 / 下载成片的有效商品任务占比。</p>
+              <p>作为北极星指标，用于衡量系统是否能在时间、轮次和成本限制内，把单个商品稳定转化为可投放成片。</p>
               <div class="evaluation-formula">采纳成片任务数 ÷ 有效商品创作任务数</div>
-            </article>
-
-            <article class="evaluation-score-card">
-              <span class="evaluation-label">卫星指标</span>
-              <h3>成片采纳率</h3>
-              <strong class="evaluation-score">70%</strong>
-              <p>衡量系统成功拼接出的最终成片中，有多少被用户保存 / 下载，代表最终结果是否达到可用标准。</p>
-              <div class="evaluation-formula">被保存 / 下载的最终成片数 ÷ 系统成功拼接生成的最终成片数</div>
             </article>
 
             <article class="evaluation-score-card">
               <span class="evaluation-label">卫星指标</span>
               <h3>素材利用效率</h3>
               <strong class="evaluation-score">55%</strong>
-              <p>衡量生成出的 Hook / Display / CTA 片段中，有多少最终进入成片，用于观察反复生成造成的素材浪费。</p>
+              <p>用于衡量钩子、展示、转化等视频片段素材的实际利用效率，判断多轮生成是否造成素材浪费。</p>
               <div class="evaluation-formula">被最终成片使用的视频片段数 ÷ 系统生成的视频片段总数</div>
             </article>
 
@@ -717,11 +709,11 @@
                 <div class="stage-metrics">
                   <button class="process-metric" type="button" data-tooltip="【LLM 初筛 + 人工复核】在 30 个商品任务的 600 条 Top-20 召回结果中，标注与目标商品属于相同或相近产品类型的比例。">
                     <span>产品类型相关率</span>
-                    <strong>70%</strong>
+                    <strong>92.3%</strong>
                   </button>
                   <button class="process-metric" type="button" data-tooltip="【LLM 初筛 + 人工复核】在 30 个商品任务的 600 条 Top-20 召回结果中，标注与目标商品在功能、功效、用户痛点或使用场景上相关的比例。">
                     <span>卖点 / 功能相关率</span>
-                    <strong>82%</strong>
+                    <strong>94.1%</strong>
                   </button>
                 </div>
               </article>
@@ -855,9 +847,9 @@
                   <button class="radar-label radar-label-right" type="button" data-tooltip="【用户问卷】这个视频吸引了我的注意力。"><span>吸引力</span><strong>5.8</strong></button>
                   <button class="radar-label radar-label-bottom-right" type="button" data-tooltip="【用户问卷】这个视频清楚传达了产品的主要卖点。"><span>卖点清晰度</span><strong>5.8</strong></button>
                   <button class="radar-label radar-label-bottom" type="button" data-tooltip="【用户问卷】我认为这个视频中的产品信息是可信的。"><span>信息可信度</span><strong>5.6</strong></button>
-                  <button class="radar-label radar-label-conversion radar-label-bottom-left" type="button" data-tooltip="【用户问卷】看完视频后，我愿意点击了解这个产品。"><span>点击意愿</span><strong>5.3</strong></button>
-                  <button class="radar-label radar-label-conversion radar-label-left" type="button" data-tooltip="【用户问卷】看完视频后，我愿意考虑购买这个产品。"><span>购买意愿</span><strong>4.7</strong></button>
-                  <button class="radar-label radar-label-conversion radar-label-top-left" type="button" data-tooltip="【用户问卷】我愿意把这个视频分享或推荐给可能感兴趣的人。"><span>分享推荐意愿</span><strong>4.5</strong></button>
+                  <button class="radar-label radar-label-conversion radar-label-bottom-left" type="button" data-tooltip="【用户问卷】看完视频后，我愿意点击了解这个产品。"><span>点击意愿</span><strong>5.9</strong></button>
+                  <button class="radar-label radar-label-conversion radar-label-left" type="button" data-tooltip="【用户问卷】看完视频后，我愿意考虑购买这个产品。"><span>购买考虑意愿</span><strong>5.4</strong></button>
+                  <button class="radar-label radar-label-conversion radar-label-top-left" type="button" data-tooltip="【用户问卷】我愿意把这个视频分享或推荐给可能感兴趣的人。"><span>分享推荐意愿</span><strong>5.2</strong></button>
                 </div>
               </div>
               <aside class="final-quality-aside" aria-label="视频质量侧边指标">
